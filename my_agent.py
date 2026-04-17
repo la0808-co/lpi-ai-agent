@@ -1,14 +1,8 @@
-#!/usr/bin/env python3
-
-# Simple LPI Agent using SMILE idea + Ollama
-
 import requests
 import json
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
 
-
-# function to get AI response from Ollama
 def get_ai_response(question, sense, model, infer):
 
     prompt = f"""
@@ -85,8 +79,6 @@ def run_agent(question):
     print("Flow used: Sense -> Model -> Infer")
     print("--------------------------------\n")
 
-
-# run loop
 if __name__ == "__main__":
 
     print("LPI Agent started")
